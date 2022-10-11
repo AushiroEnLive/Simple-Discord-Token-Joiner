@@ -1,6 +1,6 @@
 import requests
 
-link = input('https://discord.gg/SHDtJzex23')
+link = input('Your invite link')
 if len(link) > 6:
     link = link[19:]
 apilink = "https://discordapp.com/api/v6/invite/" + str(link)
@@ -15,4 +15,4 @@ with open('tokens.txt','r') as handle:
                 'Authorization': token
                 }
             requests.post(apilink, headers=headers)
-        print ("All valid tokens have joined!")
+        print ("Tous les tokens valides ont rejoint !")
